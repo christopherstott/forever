@@ -124,7 +124,7 @@ loader.on('load', function () {
           break;
           
         case 'stop':
-          var runner = forever.stop(file, true);
+          var runner = forever.stop(file, true, options.options);
           runner.on('stop', function (process) {
             sys.puts('Forever stopped process:');
             sys.puts(process);
